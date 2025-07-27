@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yotta Mannuruki</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="login-background">
+
+  <div class="wave-container" aria-label="Logo Yotta">
+    <span>Y</span><span>o</span><span>t</span><span>t</span><span>a</span><span>!</span>
+  </div>
+
+  <header>
+    <div class="header-flex">
+      <img src="assets/images.jpg" alt="Logo Yotta dengan huruf Y berwarna hijau cerah di tengah lingkaran putih, dikelilingi latar belakang hijau muda, suasana ceria dan modern, logo terletak di bagian kiri atas halaman" class="logo-yotta" />
+      <span class="judul-yotta">Yotta Mannuruki</span>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#" onclick="showSection('menu', this)" id="nav-menu">Menu</a>
+    <a href="#" onclick="showSection('login', this)" id="nav-login" class="active">Login</a>
+    <a href="https://www.instagram.com/yotta_id/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://maps.app.goo.gl/UrUxuGa42upuWSKt7?g_st=aw" target="_blank" rel="noopener">Lokasi</a>
+    <a href="https://gofood.co.id/makassar/restaurant/yotta-mannuruki-6b1cb69b-b396-470e-9c15-882daf944eb0" target="_blank" rel="noopener">GoFood</a>
+    <a href="#" onclick="logout()" id="nav-logout" style="color:#32cd32; font-weight:bold;">Logout</a>
+  </nav>
+
+  <section id="login" class="container active" aria-label="Halaman Login">
+    <form class="login-form" id="loginForm" novalidate>
+      <h2>Login</h2>
+      <label for="username">Username</label>
+      <input type="text" id="username" placeholder="Masukkan username" required autocomplete="username" />
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Masukkan password" required autocomplete="current-password" />
+      <button type="submit" class="pesan-btn">Login</button>
+      <div id="validationMessage" aria-live="polite" role="alert"></div>
+      <div id="validationMessage" style="display:none;"></div>
+    </form>
+  </section>
+
+  <section id="menu" class="container" aria-label="Halaman Menu">
+    <div class="menu-logo-center">
+      <img src="assets/images.jpg" alt="Logo Yotta di atas menu utama" onerror="this.onerror=null;this.src='assets/logo-yotta.jpg';" />
+    </div>
+
+    <div class="video-container" aria-label="Video Yotta">
+      <video controls poster="assets/video-thumb.jpg">
+        <source src="assets/WhatsApp Video 2025-05-27 at 16.52.04_8f45f6af.mp4" type="video/mp4" />
+      </video>
+    </div>
+
+    <div class="description">
+      <p><strong>Yotta!</strong> adalah merek minuman kekinian asli Makassar, Sulawesi Selatan. Merek ini awalnya menjual yoghurt tapai dan kemudian berkembang menjadi brand minuman dengan beragam varian seperti cokelat, buah-buahan, fresh drink, kopi, es krim, dan camilan yang sangat digemari anak muda. #semangatYO! mencerminkan semangat dan energi generasi muda yang ingin diwakili oleh Yotta!.</p>
+      <button class="learn-more-btn" onclick="showSection('profil', null)">Pelajari Selengkapnya</button>
+    </div>
+
+    <h2 style="text-align:center; margin-bottom:32px; color:#228b22;">Best Seller Yotta Mannuruki</h2>
+    <div class="menu-grid" role="list">
+      <article class="menu-card" role="listitem">
+        <img src="assets/b3afe75e-84b4-4cbc-9922-82162dff33a5_menu-item-image_1687861383072.webp" alt="Brown Sugar Fresh Milk" class="menu-img" />
+        <div class="menu-title">Brown Sugar Fresh Milk</div>
+        <div class="menu-desc">Susu segar dengan gula merah, creamy dan nikmat.</div>
+        <div class="menu-price">Rp 23.500</div>
+        <a class="pesan-btn" href="https://gofood.co.id/makassar/restaurant/yotta-mannuruki-6b1cb69b-b396-470e-9c15-882daf944eb0" target="_blank" rel="noopener">Pesan</a>
+      </article>
+      <article class="menu-card" role="listitem">
+        <img src="assets/1363d902-debe-4d88-8775-34ab1394a8ba_menu-item-image_1687861310463.jpg" alt="Brown Sugar Milk Tea" class="menu-img" />
+        <div class="menu-title">Brown Sugar Milk Tea</div>
+        <div class="menu-desc">Milk tea dengan gula merah khas Yotta, lembut dan manis pas.</div>
+        <div class="menu-price">Rp 25.000</div>
+        <a class="pesan-btn" href="https://gofood.co.id/makassar/restaurant/yotta-mannuruki-6b1cb69b-b396-470e-9c15-882daf944eb0" target="_blank" rel="noopener">Pesan</a>
+      </article>
+      <article class="menu-card" role="listitem">
+        <img src="assets/150a5cb7-4157-4152-9ed9-9f100b889326_menu-item-image_1687582403986.jpg" alt="Choco Belgian" class="menu-img" />
+        <div class="menu-title">Choco Belgian</div>
+        <div class="menu-desc">Cokelat Belgia premium, rasa cokelatnya pekat dan lembut.</div>
+        <div class="menu-price">Rp 25.000</div>
+        <a class="pesan-btn" href="https://gofood.co.id/makassar/restaurant/yotta-mannuruki-6b1cb69b-b396-470e-9c15-882daf944eb0" target="_blank" rel="noopener">Pesan</a>
+      </article>
+      <article class="menu-card" role="listitem">
+        <img src="assets/a177f47f-6837-4030-95d9-c10830c1c4e3_menu-item-image_1687862451539.jpg" alt="Indonesian Milk Tea" class="menu-img" />
+        <div class="menu-title">Indonesian Milk Tea</div>
+        <div class="menu-desc">Milk tea khas Indonesia, manisnya pas, cocok untuk semua.</div>
+        <div class="menu-price">Rp 18.500</div>
+        <a class="pesan-btn" href="https://gofood.co.id/makassar/restaurant/yotta-mannuruki-6b1cb69b-b396-470e-9c15-882daf944eb0" target="_blank" rel="noopener">Pesan</a>
+      </article>
+      <article class="menu-card" role="listitem">
+        <img src="assets/0a70a8aa-4a73-4de1-b08b-32443b21db2f_menu-item-image_1687861155474.jpg" alt="Greentea Smoothies" class="menu-img" />
+        <div class="menu-title">Greentea Smoothies</div>
+        <div class="menu-desc">Smoothies teh hijau yang menyegarkan dan sehat.</div>
+        <div class="menu-price">Rp 20.000</div>
+        <a class="pesan-btn" href="https://gofood.co.id/makassar/restaurant/yotta-mannuruki-6b1cb69b-b396-470e-9c15-882daf944eb0" target="_blank" rel="noopener">Pesan</a>
+      </article>
+      <article class="menu-card" role="listitem">
+        <img src="assets/844e717a-d91d-4b5b-a3aa-c05f550b25ce_menu-item-image_1687864691199.jpg" alt="Choco Cheese Milk" class="menu-img" />
+        <div class="menu-title">Choco Cheese Milk</div>
+        <div class="menu-desc">Minuman cokelat dengan keju, creamy dan gurih.</div>
+        <div class="menu-price">Rp 26.500</div>
+        <a class="pesan-btn" href="https://gofood.co.id/makassar/restaurant/yotta-mannuruki-6b1cb69b-b396-470e-9c15-882daf944eb0" target="_blank" rel="noopener">Pesan</a>
+      </article>
+    </div>
+
+    <div class="gofood-link">
+      <a href="https://gofood.co.id/makassar/restaurant/yotta-mannuruki-6b1cb69b-b396-470e-9c15-882daf944eb0" target="_blank" rel="noopener" class="pesan-btn">
+        Memesan dan melihat menu lainnya
+      </a>
+    </div>
+  </section>
+
+  <section id="profil" class="container" aria-label="Profil Yotta">
+    <h2 style="text-align:center; color:#228b22; margin-bottom:24px;">Profil Lengkap Yotta!</h2>
+    <div class="profile-wrapper">
+      <div class="profile-text">
+        <p>
+          Yotta merupakan salah satu minuman favorit mahasiswa yang diproduksi oleh PT.Yotta Berkah Mulia sebagai salah satu brand lokal dari Sulawesi Selatan. PT. Yotta merupakan sebuah perusahaan yang bergerak di bidang kuliner bubble tea berbahan dasar susu dan buah sehingga aman untuk dikonsumsi. Yotta sendiri didirikan pada tahun 2015 oleh Andryan Yudhistira Purwanto dari Universitas Negeri Makassar (UNM), alumni Fakultas Psikologi Angkatan 2012. Ide tersebut bermula pada program PKM bersama dua orang temannya yang bergabung dalam satu tim, menghadirkan minuman bergaya milenial dengan berbagai topping dan varian rasa, dan mulai membuka booth di kantin Fakultas Psikologi UNM.
+        </p>
+        <p>
+          Konsep Yotta adalah “minuman yang baik untuk semua orang”, sehingga banyak orang rela antre untuk membeli, terutama kalangan muda. Yotta sebagai brand minuman favorit pelajar, mahasiswa, maupun karyawan memiliki harga terjangkau, mulai dari Rp 10.000 – Rp 28.000. Yotta menawarkan berbagai varian minuman kekinian seperti teh, susu, buah, dan kopi yang sesuai dengan selera anak muda masa kini.
+        </p>
+        <p>
+          Saat ini Yotta memiliki 20 cabang di Kota Makassar dan sekitarnya, termasuk Booth Psikologi UNM, FMIPA UNM, FE UNM, SD Telkom, serta outlet di BTP, Daya, Antang, Tamalate, dan Talasalapang. Misinya menghasilkan olahan berkualitas, produk inovatif dan kreatif yang aman dikonsumsi sesuai standar, serta memberikan pelayanan terbaik. Data kepuasan pelanggan diperoleh melalui kuesioner kepada konsumen Yotta di Jl. Aeropala Makassar.
+        </p>
+      </div>
+      <div class="profile-photo">
+        <div class="profile-img-wrapper">
+          <img src="assets/download(1).jpg" alt="Adryan Yudhistira Purwanto" />
+          <img src="assets/images.jpg" alt="Logo kecil Yotta" class="profile-logo-mini" />
+        </div>
+        <span>Adryan Yudhistira Purwanto<br>Pendiri Yotta</span>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:30px;">
+      <button class="profile-btn" onclick="showSection('menu', document.getElementById('nav-menu'))">Kembali ke Menu</button>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Yotta Mannuruki &mdash;
+    <a href="https://gofood.co.id/makassar/restaurant/yotta-mannuruki-6b1cb69b-b396-470e-9c15-882daf944eb0" target="_blank" rel="noopener" style="color:#32cd32;">Order via GoFood</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
